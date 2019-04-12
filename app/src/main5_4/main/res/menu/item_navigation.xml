@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item android:id="@+id/itemHome"
+        android:icon="@drawable/icon_home"
+        android:title="Home"/>
+    <group android:checkableBehavior="single">
+        <item android:title="Grammar"/>
+        <item
+            android:id="@+id/itemNouns"
+            android:icon="@drawable/icon_no"
+            android:title="Nouns" />
+        <item
+            android:id="@+id/itemArticle"
+            android:icon="@drawable/icon_no"
+            android:title="Article" />
+        <item
+            android:id="@+id/itemPronoun"
+            android:icon="@drawable/icon_no"
+            android:title="Pronoun" />
+        <item
+            android:id="@+id/itemNumvernal"
+            android:icon="@drawable/icon_no"
+            android:title="Numvernal" />
+        <item
+            android:id="@+id/itemAdjective"
+            android:icon="@drawable/icon_no"
+            android:title="Adjective" />
+        <item
+            android:id="@+id/itemAdverb"
+            android:icon="@drawable/icon_no"
+            android:title="Adverb" />
+        <item
+            android:id="@+id/itemVerd"
+            android:icon="@drawable/icon_no"
+            android:title="Verd" />
+        <item
+            android:id="@+id/itemPrepostion"
+            android:icon="@drawable/icon_no"
+            android:title="Prepostion" />
+        <item
+            android:id="@+id/itemConjunction"
+            android:icon="@drawable/icon_no"
+            android:title="Conjunction" />
+        <item
+            android:id="@+id/itemParticles"
+            android:icon="@drawable/icon_no"
+            android:title="Particles" />
+        <item
+            android:id="@+id/itemInterjection"
+            android:icon="@drawable/icon_no"
+            android:title="Interjection" />
+    </group>
+    <item android:title="Other"/>
+    <group>
+        <item android:id="@+id/itemFast"
+            android:icon="@drawable/icon_fast"
+            android:title="Fast"/>
+        <item android:id="@+id/itemShare"
+            android:icon="@drawable/icon_share"
+            android:title="Share"/>
+        <item android:id="@+id/itemFeed"
+            android:icon="@drawable/icon_feed"
+            android:title="Feed"/>
+        <item android:id="@+id/itemRate"
+            android:icon="@drawable/icon_rate"
+            android:title="Rate"/>
+    </group>
+
+</menu>

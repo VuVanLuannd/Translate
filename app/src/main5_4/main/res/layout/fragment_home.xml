@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhile"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/Size_5dp"
+        >
+
+        <EditText
+            android:id="@+id/edInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/micSearch"
+            android:hint="Enter the word"
+            android:background="@color/colorWhile"
+            android:layout_centerVertical="true"
+            android:focusable="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/TextSize_H3" />
+
+        <ImageView
+            android:id="@+id/micSearch"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/icon_mic" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/colorGreen"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rccSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

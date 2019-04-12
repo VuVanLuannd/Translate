@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:checked="true"
+            android:id="@+id/navigation_shop"
+            android:icon="@drawable/icon_search"
+            android:title="@string/title_shop" />
+
+        <item
+            android:checked="true"
+            android:id="@+id/navigation_gifts"
+            android:icon="@drawable/icon_histoty"
+            android:title="@string/title_gifts" />
+
+        <item
+            android:checked="true"
+            android:id="@+id/navigation_cart"
+            android:icon="@drawable/icon_star"
+            android:title="@string/title_cart" />
+
+        <item
+            android:checked="true"
+            android:id="@+id/navigation_profile"
+            android:icon="@drawable/icon_translate"
+            android:title="@string/title_profile" />
+        <item
+            android:checked="true"
+            android:id="@+id/navigation_web"
+            android:icon="@drawable/icon_web"
+            android:title="@string/title_web" />
+
+    </group>
+</menu>

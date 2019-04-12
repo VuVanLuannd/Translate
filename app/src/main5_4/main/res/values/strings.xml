@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TranslateDemo</string>
+    <string name="StringFeedback">Chọn ứng dụng để thực hiện</string>
+    <string name="TiteleShare">Share EnglishRussian App</string>
+</resources>

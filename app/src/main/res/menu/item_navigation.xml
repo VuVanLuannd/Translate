@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/itemHome"
+        android:icon="@drawable/icon_home"
+        android:title="Home" />
+    <group android:checkableBehavior="single">
+        <item android:title="Grammar">
+            <menu>
+                <item
+                    android:id="@+id/itemNouns"
+                    android:icon="@drawable/icon_no"
+                    android:title="Nouns" />
+                <item
+                    android:id="@+id/itemPronoun"
+                    android:icon="@drawable/icon_no"
+                    android:title="Pronoun" />
+                <item
+                    android:id="@+id/itemNumvernal"
+                    android:icon="@drawable/icon_no"
+                    android:title="Numvernal" />
+                <item
+                    android:id="@+id/itemAdjective"
+                    android:icon="@drawable/icon_no"
+                    android:title="Adjective" />
+                <item
+                    android:id="@+id/itemAdverb"
+                    android:icon="@drawable/icon_no"
+                    android:title="Adverb" />
+                <item
+                    android:id="@+id/itemVerd"
+                    android:icon="@drawable/icon_no"
+                    android:title="Verd" />
+                <item
+                    android:id="@+id/itemPrepostion"
+                    android:icon="@drawable/icon_no"
+                    android:title="Prepostion" />
+                <item
+                    android:id="@+id/itemConjunction"
+                    android:icon="@drawable/icon_no"
+                    android:title="Conjunction" />
+                <item
+                    android:id="@+id/itemParticles"
+                    android:icon="@drawable/icon_no"
+                    android:title="Particles" />
+                <item
+                    android:id="@+id/itemInterjection"
+                    android:icon="@drawable/icon_no"
+                    android:title="Interjection" />
+            </menu>
+        </item>
+    </group>
+    <item android:title="PhraseBook">
+        <menu>
+            <item
+                android:id="@+id/itemBook1"
+                android:icon="@drawable/icon_book"
+                android:title="PhraseBook1" />
+            <item
+                android:id="@+id/itemBook2"
+                android:icon="@drawable/icon_book"
+                android:title="PhraseBook2" />
+        </menu>
+    </item>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/itemFast"
+                android:icon="@drawable/icon_fast"
+                android:title="Fast Key" />
+            <item
+                android:id="@+id/itemShare"
+                android:icon="@drawable/icon_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/itemFeedBack"
+                android:icon="@drawable/icon_feed"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/itemRate"
+                android:icon="@drawable/icon_rate"
+                android:title="Rate" />
+        </menu>
+    </item>
+
+</menu>
