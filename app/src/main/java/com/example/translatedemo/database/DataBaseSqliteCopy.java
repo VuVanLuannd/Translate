@@ -19,7 +19,14 @@ public class DataBaseSqliteCopy extends SQLiteOpenHelper {
     private final Context mContext;
 
     public DataBaseSqliteCopy(Context context) {
+
+
+
         super(context, DB_NAME, null, 1);
+
+        String sPackageName = context.getPackageName();
+
+
         this.mContext = context;
         Log.d("data","DatabaseSqlite");
     }

@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.translatedemo.R;
-import com.example.translatedemo.database.SqlQuery;
+import com.example.translatedemo.database.MySqlQuery;
 import com.example.translatedemo.utils.Utils;
 
 import java.util.Locale;
@@ -26,7 +26,7 @@ public class TranslatorFragment extends Fragment implements TextToSpeech.OnInitL
     private TextView mTxtLeft, mTxtRight, mTxtDistPlay;
     private EditText edInput;
     private View view;
-    private SqlQuery sqlQuery;
+    private MySqlQuery sqlQuery;
     private TextToSpeech mTextToSpeech;
     private int MY_CHECK_DATA = 0;
 
@@ -34,8 +34,8 @@ public class TranslatorFragment extends Fragment implements TextToSpeech.OnInitL
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_translator, container, false);
-        initview();
-        sqlQuery=new SqlQuery(getContext());
+        initView();
+        sqlQuery=new MySqlQuery(getContext());
         Utils.textToSpeak(getContext(),mTxtLeft, edInput, mImgSpeak,mTxtDistPlay,sqlQuery);
         return view;
     }
@@ -66,7 +66,7 @@ public class TranslatorFragment extends Fragment implements TextToSpeech.OnInitL
             }
         }
     }
-    private void initview() {
+    private void initView() {
         Intent m_checkTTSIntent = new Intent();
         m_checkTTSIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
         startActivityForResult(m_checkTTSIntent, MY_CHECK_DATA);

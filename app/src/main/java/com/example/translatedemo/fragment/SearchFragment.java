@@ -23,7 +23,7 @@ import android.widget.Toast;
 import com.example.translatedemo.R;
 import com.example.translatedemo.adpter.SearchViewAdapter;
 import com.example.translatedemo.database.DataBaseSqliteCreate;
-import com.example.translatedemo.database.SqlQuery;
+import com.example.translatedemo.database.MySqlQuery;
 import com.example.translatedemo.model.SearchModel;
 import com.example.translatedemo.ui.InfomationActivity;
 import com.example.translatedemo.utils.Utils;
@@ -42,7 +42,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
     private DataBaseSqliteCreate dataBaseSqliteCreate;
     private final int keyRequestCode = 50;
     private List<SearchModel>  arrNameOn;
-    private SqlQuery sqlQuery;
+    private MySqlQuery sqlQuery;
 
     @Nullable
     @Override
@@ -50,7 +50,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         view = inflater.inflate(R.layout.fragment_search, container, false);
         initview();
         dataBaseSqliteCreate = new DataBaseSqliteCreate(getContext());
-        sqlQuery = new SqlQuery(getContext());
+        sqlQuery = new MySqlQuery(getContext());
         EditTextInput();
         return view;
     }

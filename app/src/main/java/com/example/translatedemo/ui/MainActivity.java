@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity implements  NavigationView.O
 
     private void FloatViewServeiceClick() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            startService(new Intent(MainActivity.this, FloatViewServeceActivity.class));
+            startService(new Intent(MainActivity.this, FloatViewServiceActivity.class));
         } else if (Settings.canDrawOverlays(MainActivity.this)) {
-            startService(new Intent(MainActivity.this, FloatViewServeceActivity.class));
+            startService(new Intent(MainActivity.this, FloatViewServiceActivity.class));
         } else {
             RuntimePermissionForUser();
             Toast.makeText(MainActivity.this, "System Alert Window Permission Is Required For Floating Widget.", Toast.LENGTH_LONG).show();

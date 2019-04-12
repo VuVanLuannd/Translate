@@ -16,14 +16,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.translatedemo.R;
-import com.example.translatedemo.database.SqlQuery;
-import com.example.translatedemo.model.SearchModel;
+import com.example.translatedemo.database.MySqlQuery;
 import com.example.translatedemo.utils.Utils;
 
-import java.util.List;
 import java.util.Locale;
 
-public class FloatViewServeceActivity extends Service implements View.OnClickListener {
+public class FloatViewServiceActivity extends Service implements View.OnClickListener {
 
     private WindowManager mWindowManager;
     private View view;
@@ -32,14 +30,14 @@ public class FloatViewServeceActivity extends Service implements View.OnClickLis
     private TextToSpeech mTextToSpeech;
 
     private ImageView mImgSpeak;
-    private SqlQuery sqlQuery;
+    private MySqlQuery sqlQuery;
     private ImageView mimgClose;
     private TextView mtxtHome, mtxtLeftFloat, mtxtRightFloat, mTxtDistPlay;
     private WindowManager.LayoutParams params;
     private EditText mEdtInputFloat;
     private ImageView mimgLeftFloat, mingRightFloat, mimgChangFloat, mImgSpeakFloat;
 
-    public FloatViewServeceActivity() {
+    public FloatViewServiceActivity() {
     }
 
     @Override
@@ -191,7 +189,7 @@ public class FloatViewServeceActivity extends Service implements View.OnClickLis
     private void initView() {
         mlnIcon = view.findViewById(R.id.layoutCollapsed);
         nlnShowClick = view.findViewById(R.id.layoutExpanded);
-        sqlQuery = new SqlQuery(this);
+        sqlQuery = new MySqlQuery(this);
 
         view.findViewById(R.id.buttonClose).setOnClickListener(this);
 
@@ -232,7 +230,7 @@ public class FloatViewServeceActivity extends Service implements View.OnClickLis
                 break;
             case R.id.txtHomeFloat:
 
-                Intent intent = new Intent(FloatViewServeceActivity.this, MainActivity.class);
+                Intent intent = new Intent(FloatViewServiceActivity.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 stopSelf();

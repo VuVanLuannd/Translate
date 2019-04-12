@@ -28,7 +28,7 @@
         </activity>
 
         <service
-            android:name=".ui.FloatViewServeceActivity"
+            android:name=".ui.FloatViewServiceActivity"
             android:enabled="true"
             android:exported="false" />
     </application>

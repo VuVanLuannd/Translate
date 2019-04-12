@@ -42,10 +42,10 @@ public class FavoritesFragment extends Fragment {
 //        databaseSqlite = new DataBaseSqliteCreate(getContext());
 //        arrHistoryModel = databaseSqlite.selecterFavorites();
 
-        addRccFacorites();
+        addRccFavorites();
     }
 
-    private void addRccFacorites() {
+    private void addRccFavorites() {
         adapter = new FavoritesAdapter(arrFavorites, getContext());
         adapter.setHasStableIds(true);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);

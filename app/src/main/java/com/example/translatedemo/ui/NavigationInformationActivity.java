@@ -86,9 +86,9 @@ public class NavigationInformationActivity extends AppCompatActivity implements 
 
     private void FloatViewServeiceClick() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            startService(new Intent(NavigationInformationActivity.this, FloatViewServeceActivity.class));
+            startService(new Intent(NavigationInformationActivity.this, FloatViewServiceActivity.class));
         } else if (Settings.canDrawOverlays(NavigationInformationActivity.this)) {
-            startService(new Intent(NavigationInformationActivity.this, FloatViewServeceActivity.class));
+            startService(new Intent(NavigationInformationActivity.this, FloatViewServiceActivity.class));
         } else {
             RuntimePermissionForUser();
             Toast.makeText(NavigationInformationActivity.this, "System Alert Window Permission Is Required For Floating Widget.", Toast.LENGTH_LONG).show();
@@ -199,6 +199,8 @@ public class NavigationInformationActivity extends AppCompatActivity implements 
         switch (v.getId()){
             case R.id.imgBackNavi:
                 finish();
+
+                //onBackPressed();
                 break;
         }
     }

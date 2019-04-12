@@ -45,7 +45,7 @@ public class NavigationInfromtionAdapter extends RecyclerView.Adapter<Navigation
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        viewHolder.name.setText(arrName.get(i).getName());
+        viewHolder.txtName.setText(arrName.get(i).getName());
     }
 
     @Override
@@ -54,13 +54,13 @@ public class NavigationInfromtionAdapter extends RecyclerView.Adapter<Navigation
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView name;
-        private LinearLayout RlItem;
+        private TextView txtName;
+        private LinearLayout rlItem;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            name=itemView.findViewById(R.id.txtname);
-            RlItem=itemView.findViewById(R.id.rlItem);
-            RlItem.setOnClickListener(new View.OnClickListener() {
+            txtName=itemView.findViewById(R.id.txtname);
+            rlItem=itemView.findViewById(R.id.rlItem);
+            rlItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     ClickListener.onclik(getAdapterPosition());

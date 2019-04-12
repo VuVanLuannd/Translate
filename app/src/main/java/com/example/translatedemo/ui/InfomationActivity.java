@@ -16,18 +16,18 @@ public class InfomationActivity extends AppCompatActivity implements View.OnClic
     private TextView mtxtTitle,mtxtWord,mtxtDistplay;
     private ImageView mimgBack,mimgSpeak;
     private TextToSpeech mTextToSpeech;
-    private String Temp;
+    private String sTemp; // iTemp
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
 
         initView();
-        ListenIntent();
+        listenIntent();
     }
-    private void ListenIntent(){
+    private void listenIntent(){
         Intent intent=getIntent();
-        Temp=intent.getStringExtra("word");
+        sTemp=intent.getStringExtra("word");
         mtxtTitle.setText(intent.getStringExtra("word"));
         mtxtWord.setText(intent.getStringExtra("word"));
         mtxtDistplay.setText(intent.getStringExtra("denition"));
@@ -55,7 +55,7 @@ public class InfomationActivity extends AppCompatActivity implements View.OnClic
                 finish();
                 break;
             case R.id.imgInforSpeak:
-                mTextToSpeech.speak(Temp,TextToSpeech.QUEUE_FLUSH,null);
+                mTextToSpeech.speak(sTemp,TextToSpeech.QUEUE_FLUSH,null);
                 break;
         }
     }

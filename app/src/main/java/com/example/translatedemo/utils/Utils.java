@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.translatedemo.R;
-import com.example.translatedemo.database.SqlQuery;
+import com.example.translatedemo.database.MySqlQuery;
 import com.example.translatedemo.model.SearchModel;
 
 import java.util.List;
@@ -28,7 +28,7 @@ public class Utils {
         imm.showSoftInput(edInPut, InputMethodManager.SHOW_IMPLICIT);
     }
 
-    public static void textToSpeak(final Context context, final TextView txtLeft, final EditText editTextInput, final ImageView imageViewSpeak, final TextView textView,final SqlQuery sqlQuery) {
+    public static void textToSpeak(final Context context, final TextView txtLeft, final EditText editTextInput, final ImageView imageViewSpeak, final TextView textView,final MySqlQuery sqlQuery) {
         editTextInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

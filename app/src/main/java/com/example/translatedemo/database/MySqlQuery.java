@@ -3,20 +3,19 @@ package com.example.translatedemo.database;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import com.example.translatedemo.model.SearchModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SqlQuery {
+public class MySqlQuery {
 
     private SQLiteDatabase database;
     private DataBaseSqliteCopy copyDataBaseSqlite;
 
     //    public SqlQuery(){}
-    public SqlQuery(Context context) {
+    public MySqlQuery(Context context) {
         copyDataBaseSqlite = new DataBaseSqliteCopy(context);
         database = copyDataBaseSqlite.openDB();
     }
